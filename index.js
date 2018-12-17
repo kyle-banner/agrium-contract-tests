@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
-import Jasmine from 'jasmine';
+import { run, doSomething } from './tests/testRunner';
 
-const jasmine = new Jasmine();
 const env = dotenv.config();
 let envVars;
 if (env.error) {
@@ -9,7 +8,6 @@ if (env.error) {
 } else {
   envVars = env.parsed;
 }
-
-// runTests();
-jasmine.execute();
+run();
+doSomething();
 console.log(envVars);

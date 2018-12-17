@@ -7,8 +7,8 @@
     "url": "git@github.com:Agrium/agrium-contract-tests.git"
   },
   "scripts": {
-    "build": "babel index.js -d dist",
-    "start": "npm run build && nodemon dist/index.js",
+    "build": "babel index.js",
+    "start": "nodemon --exec babel-node index.js",
     "test:api": "export NODE_ENV=$npm_config_env && nyc --reporter=text-summary --reporter=json-summary node ./config/jasmine.runner.js",
     "test:apiOnWindows": "node ./config/jasmine.runner.js",
     "test:local": "export USERNAME=tester & export=password"
