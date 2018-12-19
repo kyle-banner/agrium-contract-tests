@@ -8,6 +8,7 @@ if (env.error) {
 } else {
   envVars = env.parsed;
 }
+
 run();
 doSomething();
 console.log(envVars);
