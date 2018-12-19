@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { authenticatedCxhApiClient } from '../../clients';
 
 describe('CXH-API', () => {
